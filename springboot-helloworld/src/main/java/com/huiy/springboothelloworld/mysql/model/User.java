@@ -1,4 +1,4 @@
-package com.huiy.springboothelloworld.model;
+package com.huiy.springboothelloworld.mysql.model;
 
 import java.io.Serializable;
 

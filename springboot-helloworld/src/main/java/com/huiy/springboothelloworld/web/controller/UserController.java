@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.huiy.springboothelloworld.model.User;
+import com.huiy.springboothelloworld.mysql.model.User;
 
 /** 
  * 类功能描述

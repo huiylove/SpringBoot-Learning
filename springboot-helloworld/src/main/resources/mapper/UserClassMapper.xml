@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="com.huiy.springboothelloworld.mysql.mapper.UserClassMapper">  
+   
+    <resultMap id="UserClassMap" type="com.huiy.springboothelloworld.vo.UserClassVo">
+        <result property="userName" column="NAME"/>
+        <result property="className" column="CLASS_NAME"/>
+    </resultMap>
+   
+   
+  <select id="findUserClass" parameterType="java.util.HashMap" resultMap="UserClassMap">  
+    SELECT u.name,c.class_name FROM user_class uc
+	left join user u on u.id = uc.user_id 
+	left join class c on c.id = uc.class_id
+	where 1=1
+	<if test="userId != null and userId != ''">
+            AND u.id = #{userId}
+    </if>
+    <if test="userName != null and userName != ''">
+            AND u.name = #{userName}
+    </if>
+  </select>  
+  
+  
+  <select id="findUserClassByIds" parameterType="java.util.HashMap" resultMap="UserClassMap">  
+    SELECT u.name,c.class_name FROM user_class uc
+	left join user u on u.id = uc.user_id 
+	left join class c on c.id = uc.class_id
+	where u.id in
+	<foreach item="item" index="index" collection="uids" open="(" separator="," close=")">  
+	  #{item}  
+	</foreach> 
+  </select> 
+  
+   
+</mapper>  

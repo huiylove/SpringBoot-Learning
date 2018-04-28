@@ -2,7 +2,7 @@ package com.huiy.springboothelloworld.web.service;
 
 import java.util.List;
 
-import com.huiy.springboothelloworld.model.User;
+import com.huiy.springboothelloworld.mysql.model.User;
 
 /** 
  * 

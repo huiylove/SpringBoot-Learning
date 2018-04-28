@@ -6,7 +6,6 @@ import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
-import com.huiy.springboothelloworld.model.User;
 import com.huiy.springboothelloworld.redis.RedisObjectSerializer;
 
 /** 
@@ -18,8 +17,8 @@ import com.huiy.springboothelloworld.redis.RedisObjectSerializer;
 public class RedisConfig {
 	
 	 @Bean
-	 public RedisTemplate<String,User> redisTemplate(RedisConnectionFactory factory){
-		 RedisTemplate<String, User> template = new RedisTemplate<String, User>();
+	 public RedisTemplate<String,Object> redisTemplate(RedisConnectionFactory factory){
+		 RedisTemplate<String, Object> template = new RedisTemplate<String, Object>();
 	        template.setConnectionFactory(factory);
 	        template.setKeySerializer(new StringRedisSerializer());
 	        template.setValueSerializer(new RedisObjectSerializer());

@@ -8,7 +8,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
 
-import com.huiy.springboothelloworld.model.User;
+import com.huiy.springboothelloworld.mysql.mapper.UserMapper;
+import com.huiy.springboothelloworld.mysql.model.User;
 import com.huiy.springboothelloworld.web.service.UserService;
 
 /** 
@@ -21,6 +22,10 @@ public class UserServiceImpl implements UserService{
 	
 	@Autowired
     private JdbcTemplate jdbcTemplate;
+	
+
+	@Autowired
+    private UserMapper userMapper;
 
 	@Override
 	public void create(String name, Integer age) {
@@ -34,9 +39,10 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public List<User> getAllUsers() {
-		RowMapper<User> rowMapper = new BeanPropertyRowMapper<User>(User.class);//查询结果映射到对象
-		return jdbcTemplate.query("select id,name,age from USER", rowMapper);
-//        return jdbcTemplate.queryForObject("select count(1) from USER", Integer.class);
+//		RowMapper<User> rowMapper = new BeanPropertyRowMapper<User>(User.class);//查询结果映射到对象
+//		return jdbcTemplate.query("select id,name,age from USER", rowMapper);
+//      return jdbcTemplate.queryForObject("select count(1) from USER", Integer.class);
+		return userMapper.findUserInfo();
 	}
 
 	@Override

@@ -10,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.huiy.springboothelloworld.model.User;
+import com.huiy.springboothelloworld.mysql.model.User;
 
 /** 
  * 
@@ -27,7 +27,7 @@ public class SpringDataRedisTest {
 //	private StringRedisTemplate stringRedisTemplate;
 
 	@Autowired
-	private RedisTemplate<String, User> redisTemplate;
+	private RedisTemplate<String, Object> redisTemplate;
 	
 
 	@Test
@@ -38,7 +38,7 @@ public class SpringDataRedisTest {
 //		Assert.assertEquals("111", stringRedisTemplate.opsForValue().get("aaa"));
 		redisTemplate.opsForValue().set("user1", new User("aaaa",27));
 		redisTemplate.opsForValue().set("user2", new User("bbbb",28));
-		Assert.assertEquals(27,redisTemplate.opsForValue().get("user1").getAge().intValue());
+		Assert.assertEquals(27,((User)(redisTemplate.opsForValue().get("user1"))).getAge().intValue());
 //		Assert.assertEquals("bbbb",redisTemplate.opsForValue().get("user2").getName());
 
 

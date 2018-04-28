@@ -1,3 +1,4 @@
+
 package com.huiy.springboothelloworld.web.controller;
 
 import java.util.List;
@@ -11,7 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 import springfox.documentation.annotations.ApiIgnore;
 
 import com.huiy.springboothelloworld.jpa.UserRepository;
-import com.huiy.springboothelloworld.model.User;
+import com.huiy.springboothelloworld.mysql.mapper.UserMapper;
+import com.huiy.springboothelloworld.mysql.model.User;
 import com.huiy.springboothelloworld.web.service.UserService;
 
 /** 
@@ -30,6 +32,7 @@ public class UserWithSpringDataController {
 		@Autowired
 		private UserRepository userRepository;
 		
+		
 		@ApiIgnore
 	    @RequestMapping(value="/save", method=RequestMethod.POST) 
 	    public String saveUser(@ModelAttribute User user) { 
@@ -40,10 +43,11 @@ public class UserWithSpringDataController {
 		@ApiIgnore
 	    @RequestMapping(value="/all", method=RequestMethod.GET) 
 	    public List<User> getUserList() { 
-	        // 处理"/users/"的GET请求，用来获取用户列表 
 	        // 还可以通过@RequestParam从页面中传递参数来进行查询条件或者翻页信息的传递 
-	        return userRepository.findAll();
+	        return UserService.getAllUsers();
 	    } 
+		
+		
 		
 
 }

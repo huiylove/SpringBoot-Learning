@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="com.huiy.springboothelloworld.mysql.mapper.UserMapper">  
+   
+     <resultMap id="UserMap" type="com.huiy.springboothelloworld.mysql.model.User">
+        <result property="id" column="ID"/>
+        <result property="name" column="NAME"/>
+        <result property="age" column="AGE"/>
+    </resultMap>
+   
+   
+  <select id="findUserInfo" resultType="com.huiy.springboothelloworld.mysql.model.User">  
+    select id,name,age from user;  
+  </select>  
+  
+  <insert id="addUserInfo" parameterType="com.huiy.springboothelloworld.mysql.model.User">  
+    insert into user (name,age) 
+    values (#{name,jdbcType=VARCHAR},#{age,jdbcType=INTEGER})  
+  </insert>  
+  
+  <delete id="delUserInfo" parameterType="java.lang.Integer">  
+   delete from user where id = #{id,jdbcType=INTEGER}  
+  </delete>  
+   
+</mapper>  
