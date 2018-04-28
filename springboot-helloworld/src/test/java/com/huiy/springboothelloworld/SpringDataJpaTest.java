@@ -12,9 +12,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import springfox.documentation.spring.web.json.Json;
-
-import com.huiy.springboothelloworld.model.UserRepository;
+import com.huiy.springboothelloworld.jpa.UserRepository;
 import com.huiy.springboothelloworld.web.controller.UserWithSpringDataController;
 
 /** 

@@ -1,0 +1,110 @@
+2018-04-28 10:12:12.455  INFO 11164 --- [main] c.h.s.SpringDataRedisTest                : Starting SpringDataRedisTest on user-PC with PID 11164 (started by user in E:\Eclipse\SpringBoot\springboot-helloworld)
+2018-04-28 10:12:12.470  INFO 11164 --- [main] c.h.s.SpringDataRedisTest                : The following profiles are active: test
+2018-04-28 10:12:12.751  INFO 11164 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3337854f: startup date [Sat Apr 28 10:12:12 CST 2018]; root of context hierarchy
+2018-04-28 10:12:14.164  INFO 11164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-04-28 10:12:14.282  INFO 11164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-04-28 10:12:14.328  INFO 11164 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.huiy.springboothelloworld.jpa.UserRepository.
+2018-04-28 10:12:15.389  INFO 11164 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4346b611] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-04-28 10:12:16.554  INFO 11164 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-04-28 10:12:16.566  INFO 11164 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-04-28 10:12:16.645  INFO 11164 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-04-28 10:12:16.660  INFO 11164 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-04-28 10:12:16.660  INFO 11164 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-04-28 10:12:16.707  INFO 11164 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-04-28 10:12:16.832  INFO 11164 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-04-28 10:12:17.071  WARN 11164 --- [main] o.h.b.i.SessionFactoryBuilderImpl        : Unrecognized hbm2ddl_auto value : create .  Supported values include create, create-drop, update, and validate.  Ignoring
+2018-04-28 10:12:17.383  INFO 11164 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-04-28 10:12:17.743  INFO 11164 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-04-28 10:12:18.587  INFO 11164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/freemarker]}" onto public java.lang.String com.huiy.springboothelloworld.web.controller.FreeMarkerController.index(org.springframework.ui.Model)
+2018-04-28 10:12:18.587  INFO 11164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/exceptioninJSON]}" onto public java.lang.String com.huiy.springboothelloworld.web.controller.HelloWorldController.json() throws com.huiy.frame.core.exception.MyException
+2018-04-28 10:12:18.587  INFO 11164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.huiy.springboothelloworld.web.controller.HelloWorldController.hello() throws java.lang.Exception
+2018-04-28 10:12:18.587  INFO 11164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.huiy.springboothelloworld.web.controller.ThymeleafController.index(org.springframework.ui.ModelMap)
+2018-04-28 10:12:18.587  INFO 11164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[PUT]}" onto public java.lang.String com.huiy.springboothelloworld.web.controller.UserController.putUser(java.lang.Long,com.huiy.springboothelloworld.model.User)
+2018-04-28 10:12:18.587  INFO 11164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[DELETE]}" onto public java.lang.String com.huiy.springboothelloworld.web.controller.UserController.deleteUser(java.lang.Long)
+2018-04-28 10:12:18.587  INFO 11164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/],methods=[GET]}" onto public java.util.List<com.huiy.springboothelloworld.model.User> com.huiy.springboothelloworld.web.controller.UserController.getUserList()
+2018-04-28 10:12:18.587  INFO 11164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[GET]}" onto public com.huiy.springboothelloworld.model.User com.huiy.springboothelloworld.web.controller.UserController.getUser(java.lang.Long)
+2018-04-28 10:12:18.587  INFO 11164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/],methods=[POST]}" onto public java.lang.String com.huiy.springboothelloworld.web.controller.UserController.postUser(com.huiy.springboothelloworld.model.User)
+2018-04-28 10:12:18.587  INFO 11164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/save],methods=[POST]}" onto public java.lang.String com.huiy.springboothelloworld.web.controller.UserWithSpringDataController.saveUser(com.huiy.springboothelloworld.model.User)
+2018-04-28 10:12:18.587  INFO 11164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/all],methods=[GET]}" onto public java.util.List<com.huiy.springboothelloworld.model.User> com.huiy.springboothelloworld.web.controller.UserWithSpringDataController.getUserList()
+2018-04-28 10:12:18.587  INFO 11164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/velocity]}" onto public java.lang.String com.huiy.springboothelloworld.web.controller.VelocityController.index(org.springframework.ui.Model)
+2018-04-28 10:12:18.587  INFO 11164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String)
+2018-04-28 10:12:18.602  INFO 11164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-04-28 10:12:18.602  INFO 11164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-04-28 10:12:18.602  INFO 11164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-04-28 10:12:18.618  INFO 11164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-28 10:12:18.618  INFO 11164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-28 10:12:20.715  INFO 11164 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@3337854f: startup date [Sat Apr 28 10:12:12 CST 2018]; root of context hierarchy
+2018-04-28 10:12:20.835  INFO 11164 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-28 10:12:20.835  INFO 11164 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-28 10:12:20.850  INFO 11164 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in globalExceptionHandler
+2018-04-28 10:12:20.885  INFO 11164 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-28 10:12:22.374  INFO 11164 --- [main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2018-04-28 10:12:22.684  INFO 11164 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2018-04-28 10:12:22.700  INFO 11164 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found {0} custom documentation plugin(s)
+2018-04-28 10:12:22.715  INFO 11164 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-04-28 10:12:22.715  INFO 11164 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getUserList was user-controller
+2018-04-28 10:12:22.715  INFO 11164 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getUserList belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.huiy.springboothelloworld.web.controller.UserController}]] 
+2018-04-28 10:12:22.715  INFO 11164 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method postUser was user-controller
+2018-04-28 10:12:22.715  INFO 11164 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: postUser belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.huiy.springboothelloworld.web.controller.UserController}]] 
+2018-04-28 10:12:22.715  INFO 11164 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method putUser was user-controller
+2018-04-28 10:12:22.715  INFO 11164 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: putUser belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.huiy.springboothelloworld.web.controller.UserController}]] 
+2018-04-28 10:12:22.715  INFO 11164 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method deleteUser was user-controller
+2018-04-28 10:12:22.715  INFO 11164 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: deleteUser belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.huiy.springboothelloworld.web.controller.UserController}]] 
+2018-04-28 10:12:22.715  INFO 11164 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getUser was user-controller
+2018-04-28 10:12:22.715  INFO 11164 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getUser belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.huiy.springboothelloworld.web.controller.UserController}]] 
+2018-04-28 10:12:22.731  INFO 11164 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/user-controller Description: user-controller Position: 0
+2018-04-28 10:12:22.747  INFO 11164 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2018-04-28 10:12:22.747  INFO 11164 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.String(true)
+2018-04-28 10:12:22.762  INFO 11164 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2018-04-28 10:12:22.762  INFO 11164 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2018-04-28 10:12:22.778  INFO 11164 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /users/{id}.com.huiy.springboothelloworld.web.controller.UserController.deleteUser.DefaultGenericTypeNamingStrategy
+2018-04-28 10:12:22.778  INFO 11164 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /users/{id}.com.huiy.springboothelloworld.web.controller.UserController.deleteUser.DefaultGenericTypeNamingStrategy
+2018-04-28 10:12:22.794  INFO 11164 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method deleteUser was user-controller
+2018-04-28 10:12:22.809  INFO 11164 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method deleteUser was user-controller
+2018-04-28 10:12:22.809  INFO 11164 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.huiy.springboothelloworld.model.User(true)
+2018-04-28 10:12:22.809  INFO 11164 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.huiy.springboothelloworld.model.User(true)
+2018-04-28 10:12:22.825  INFO 11164 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.huiy.springboothelloworld.model.User(true)
+2018-04-28 10:12:22.825  INFO 11164 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.huiy.springboothelloworld.model.User(true)
+2018-04-28 10:12:22.840  INFO 11164 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.huiy.springboothelloworld.model.User(true)
+2018-04-28 10:12:22.840  INFO 11164 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.huiy.springboothelloworld.model.User(true)
+2018-04-28 10:12:22.840  INFO 11164 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.huiy.springboothelloworld.model.User(true)
+2018-04-28 10:12:22.840  INFO 11164 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.huiy.springboothelloworld.model.User(true)
+2018-04-28 10:12:22.840  INFO 11164 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /users/{id}.com.huiy.springboothelloworld.web.controller.UserController.getUser.DefaultGenericTypeNamingStrategy
+2018-04-28 10:12:22.840  INFO 11164 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /users/{id}.com.huiy.springboothelloworld.web.controller.UserController.getUser.DefaultGenericTypeNamingStrategy
+2018-04-28 10:12:22.840  INFO 11164 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getUser was user-controller
+2018-04-28 10:12:22.840  INFO 11164 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getUser was user-controller
+2018-04-28 10:12:22.840  INFO 11164 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.huiy.springboothelloworld.model.User>(true)
+2018-04-28 10:12:22.840  INFO 11164 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.List<com.huiy.springboothelloworld.model.User>(true)
+2018-04-28 10:12:22.840  INFO 11164 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.huiy.springboothelloworld.model.User>(true)
+2018-04-28 10:12:22.840  INFO 11164 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.List<com.huiy.springboothelloworld.model.User>(true)
+2018-04-28 10:12:22.840  INFO 11164 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.huiy.springboothelloworld.model.User(true)
+2018-04-28 10:12:22.840  INFO 11164 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.huiy.springboothelloworld.model.User(true)
+2018-04-28 10:12:22.840  INFO 11164 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: java.util.List<com.huiy.springboothelloworld.model.User>(true)
+2018-04-28 10:12:22.840  INFO 11164 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key java.util.List<com.huiy.springboothelloworld.model.User>(true)
+2018-04-28 10:12:22.840  INFO 11164 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.huiy.springboothelloworld.model.User(true)
+2018-04-28 10:12:22.840  INFO 11164 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.huiy.springboothelloworld.model.User(true)
+2018-04-28 10:12:22.840  INFO 11164 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /users/.com.huiy.springboothelloworld.web.controller.UserController.getUserList.DefaultGenericTypeNamingStrategy
+2018-04-28 10:12:22.840  INFO 11164 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /users/.com.huiy.springboothelloworld.web.controller.UserController.getUserList.DefaultGenericTypeNamingStrategy
+2018-04-28 10:12:22.840  INFO 11164 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getUserList was user-controller
+2018-04-28 10:12:22.856  INFO 11164 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getUserList was user-controller
+2018-04-28 10:12:22.856  INFO 11164 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2018-04-28 10:12:22.856  INFO 11164 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.String(true)
+2018-04-28 10:12:22.856  INFO 11164 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2018-04-28 10:12:22.856  INFO 11164 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2018-04-28 10:12:22.856  INFO 11164 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /users/.com.huiy.springboothelloworld.web.controller.UserController.postUser.DefaultGenericTypeNamingStrategy
+2018-04-28 10:12:22.856  INFO 11164 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /users/.com.huiy.springboothelloworld.web.controller.UserController.postUser.DefaultGenericTypeNamingStrategy
+2018-04-28 10:12:22.856  INFO 11164 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method postUser was user-controller
+2018-04-28 10:12:22.856  INFO 11164 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method postUser was user-controller
+2018-04-28 10:12:22.856  INFO 11164 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2018-04-28 10:12:22.856  INFO 11164 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.String(true)
+2018-04-28 10:12:22.856  INFO 11164 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2018-04-28 10:12:22.856  INFO 11164 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2018-04-28 10:12:22.856  INFO 11164 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /users/{id}.com.huiy.springboothelloworld.web.controller.UserController.putUser.DefaultGenericTypeNamingStrategy
+2018-04-28 10:12:22.856  INFO 11164 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /users/{id}.com.huiy.springboothelloworld.web.controller.UserController.putUser.DefaultGenericTypeNamingStrategy
+2018-04-28 10:12:22.872  INFO 11164 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method putUser was user-controller
+2018-04-28 10:12:22.872  INFO 11164 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method putUser was user-controller
+2018-04-28 10:12:22.884  INFO 11164 --- [main] c.h.s.SpringDataRedisTest                : Started SpringDataRedisTest in 10.75 seconds (JVM running for 11.657)
+2018-04-28 10:12:22.993  INFO 11164 --- [Thread-3] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@3337854f: startup date [Sat Apr 28 10:12:12 CST 2018]; root of context hierarchy
+2018-04-28 10:12:23.024  INFO 11164 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'

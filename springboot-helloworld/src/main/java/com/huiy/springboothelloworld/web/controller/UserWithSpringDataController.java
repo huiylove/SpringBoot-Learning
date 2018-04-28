@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import springfox.documentation.annotations.ApiIgnore;
 
+import com.huiy.springboothelloworld.jpa.UserRepository;
 import com.huiy.springboothelloworld.model.User;
-import com.huiy.springboothelloworld.model.UserRepository;
 import com.huiy.springboothelloworld.web.service.UserService;
 
 /** 
