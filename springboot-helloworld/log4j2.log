@@ -1,0 +1,2 @@
+${pattern}${pattern}Unrecognized hbm2ddl_auto value : create .  Supported values include create, create-drop, update, and validate.  Ignoring
+2018-05-02 16:29:25.409 |-WARN  [main] org.hibernate.boot.internal.SessionFactoryBuilderImpl [648] -| Unrecognized hbm2ddl_auto value : create .  Supported values include create, create-drop, update, and validate.  Ignoring

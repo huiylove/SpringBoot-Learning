@@ -28,8 +28,19 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
+			  <exclusions>  
+		        <exclusion>  
+		            <groupId>org.springframework.boot</groupId>  
+		            <artifactId>spring-boot-starter-logging</artifactId>  
+		        </exclusion>  
+		      </exclusions>
 		</dependency>
-
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j2</artifactId>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -96,17 +107,33 @@
 		    <artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>
 		
-		<dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
+<!-- 		<dependency> -->
+<!--             <groupId>org.springframework.boot</groupId> -->
+<!--             <artifactId>spring-boot-starter-security</artifactId> -->
+<!--         </dependency> -->
         
         <dependency>
-		<groupId>org.mybatis.spring.boot</groupId>
-		<artifactId>mybatis-spring-boot-starter</artifactId>
-		<version>1.1.1</version>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>1.1.1</version>
 		</dependency>
-	
+		
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-cache</artifactId>
+		</dependency>
+		
+		<dependency>
+		    <groupId>net.sf.ehcache</groupId>
+		    <artifactId>ehcache</artifactId>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+		
+
 	</dependencies>
 
 	<build>

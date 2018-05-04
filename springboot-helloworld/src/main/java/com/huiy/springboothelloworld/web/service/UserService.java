@@ -2,6 +2,10 @@ package com.huiy.springboothelloworld.web.service;
 
 import java.util.List;
 
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.huiy.springboothelloworld.mysql.model.User;
 
 /** 
@@ -16,6 +20,7 @@ public interface UserService {
      * @param name
      * @param age
      */
+//	@Transactional(isolation = Isolation.DEFAULT,propagation = Propagation.REQUIRED)
     void create(String name, Integer age);
 
     /**

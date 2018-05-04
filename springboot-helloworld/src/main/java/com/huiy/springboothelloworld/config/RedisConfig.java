@@ -13,16 +13,16 @@ import com.huiy.springboothelloworld.redis.RedisObjectSerializer;
  * @author : yuanhui 
  * @date   : 2018年4月28日
  */
-@Configuration
-public class RedisConfig {
+//@Configuration
+//public class RedisConfig {
 	
-	 @Bean
-	 public RedisTemplate<String,Object> redisTemplate(RedisConnectionFactory factory){
-		 RedisTemplate<String, Object> template = new RedisTemplate<String, Object>();
-	        template.setConnectionFactory(factory);
-	        template.setKeySerializer(new StringRedisSerializer());
-	        template.setValueSerializer(new RedisObjectSerializer());
-	        return template;
-	 }
+//	 @Bean
+//	 public RedisTemplate<String,Object> redisTemplate(RedisConnectionFactory factory){
+//		 RedisTemplate<String, Object> template = new RedisTemplate<String, Object>();
+//	        template.setConnectionFactory(factory);
+//	        template.setKeySerializer(new StringRedisSerializer());
+//	        template.setValueSerializer(new RedisObjectSerializer());
+//	        return template;
+//	 }
 
-}
+//}

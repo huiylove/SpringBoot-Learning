@@ -23,6 +23,7 @@ public class AccessTokenVerifyInterceptor extends HandlerInterceptorAdapter {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {
         LOG.info("AccessToken executing ...");
+        
         //token验证
 //        String token = request.getParameter("access_token");
         System.out.println("--------------------进入拦截器-----------------");

@@ -2,6 +2,8 @@ package com.huiy.springboothelloworld.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import springfox.documentation.annotations.ApiIgnore;
 
@@ -16,13 +18,21 @@ import com.huiy.frame.core.exception.MyException;
 //@RestController
 @Controller
 public class HelloWorldController {
-
+	
     @ApiIgnore
 	@RequestMapping("/hello")
-	public String hello() throws Exception{
-//		return "Hello World";
-    	throw new Exception("统一异常处理");
+    @ResponseBody
+	public String hello(@RequestParam(required=false) String name) throws Exception{
+    	return "hello"+name;
 	}
+	   
+
+//  @ApiIgnore
+//	@RequestMapping("/hello")
+//	public String hello() throws Exception{
+////		return "Hello World";
+//    	throw new Exception("统一异常处理");
+//	}
     
 
     @ApiIgnore
