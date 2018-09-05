@@ -27,6 +27,7 @@ public class PropertiesApplicationTest {
 	public void contextLoads() throws Exception {
 		Assert.assertEquals("huiylove",springbootProperties.getName());
 		Assert.assertEquals( "SpringBoot",springbootProperties.getTitle());
+		
 	}
 
 
