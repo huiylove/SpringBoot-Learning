@@ -18,9 +18,8 @@ public class ScheduleTask {
 	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
 
 //    @Scheduled(fixedRate = 5000)
-    @Scheduled(cron="0 0/1 * * * ?")//0 0 0/1 * * ?
+//    @Scheduled(cron="0 0/1 * * * ?")//0 0 0/1 * * ?
     public void reportCurrentTime() {
         System.out.println("现在时间：" + dateFormat.format(new Date()));
     }
-
 }

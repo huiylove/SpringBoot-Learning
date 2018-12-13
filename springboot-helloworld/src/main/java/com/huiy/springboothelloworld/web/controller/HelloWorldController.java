@@ -23,7 +23,7 @@ public class HelloWorldController {
 	@RequestMapping("/hello")
     @ResponseBody
 	public String hello(@RequestParam(required=false) String name) throws Exception{
-    	return "hello"+name;
+    	return "hello  "+name+"!";
 	}
 	   
 
