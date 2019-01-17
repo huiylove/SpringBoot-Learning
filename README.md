@@ -13,6 +13,7 @@ SpringBoot1.x学习记录
 
 SpringBoot2.x学习记录
 1、构建RESTful API以及单元测试
-2、@ConfigurationProperties（prefix =''）、@PropertySource等注解使用
-3、日志记录 spring2.0默认采用slf4j+logback日志框架，学习slf4j+log4j日志框架
+2、配置文件的使用 @ConfigurationProperties（prefix =''）、@PropertySource等注解使用
+3、Profiles的使用
+4、日志记录 spring2.0默认采用slf4j+logback日志框架，学习slf4j+log4j日志框架
 
