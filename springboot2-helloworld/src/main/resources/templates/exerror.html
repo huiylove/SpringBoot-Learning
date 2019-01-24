@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Error Handler</h1>
-    <div th:text="${url}"></div>
-    <div th:text="${exception.message}"></div>
+    <p><span style="color:red;">请求url：</span><span th:text="${url}" ></span></p>
+    <p><span style="color:red;">错误信息：</span><span th:text="${exception.message}"></span></p>
 </body>
 </html>

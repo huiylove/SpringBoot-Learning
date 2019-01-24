@@ -1,6 +1,6 @@
 package com.huiy.springboot2;
 
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,7 +10,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import com.huiy.springboot2.web.model.Person;
 
-@Slf4j //springboot2.0默认采用slf4j+logback日志框架
+//@Slf4j //springboot2.0默认采用slf4j+logback日志框架
+@Log4j2
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class Springboot2HelloworldApplicationTests {

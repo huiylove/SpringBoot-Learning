@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="com.huiy.springboot2.web.mapper.UserMapper">  
+   
+     <resultMap id="UserMap" type="com.huiy.springboot2.web.model.User">
+        <result property="id" column="ID"/>
+        <result property="name" column="NAME"/>
+        <result property="age" column="AGE"/>
+        <result property="birthday" column="birthday"/>
+        
+    </resultMap>
+   
+   
+  <select id="getAllUser" resultMap="UserMap">  
+    select id,name,age,birthday from user
+  </select>  
+  
+  <insert id="addUserInfo" parameterType="com.huiy.springboot2.web.model.User">  
+    insert into user (name,age,birthday) 
+    values (#{name},#{age},#{birthday})  
+  </insert>  
+  
+  <update id="updateUserInfo" parameterType="com.huiy.springboot2.web.model.User">
+           <![CDATA[ update user set 
+				id = #{id}
+		   ]]>
+     <if test="name != null and name != '' "> ,name = #{name}</if>
+	<if test="age != null and age != '' "> ,age = #{age}</if>
+	<if test="birthday != null"> ,birthday = #{birthday}</if>
+	 <![CDATA[ 
+           where id = #{id}
+	]]>
+  </update>
+  
+  <delete id="delUserInfo" parameterType="java.lang.Integer">  
+   delete from user where id = #{id}  
+  </delete>  
+  
+  <select id="getUser" parameterType="java.lang.Integer" resultMap="UserMap">  
+   	select id,name,age,birthday from user where id = #{id}  
+  </select>  
+   
+</mapper>  
