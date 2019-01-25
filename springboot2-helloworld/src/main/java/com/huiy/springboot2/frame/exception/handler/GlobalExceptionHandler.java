@@ -19,7 +19,7 @@ import com.huiy.springboot2.frame.model.ErrorRespInfo;
  */
 @Log4j2
 @ControllerAdvice
-public class GlobalExceptionHandler {
+public class GlobalExceptionHandler { 
 	
 	public static final String DEFAULT_ERROR_VIEW = "exerror";
 
@@ -27,9 +27,9 @@ public class GlobalExceptionHandler {
     public ModelAndView defaultErrorHandler(HttpServletRequest req,final Exception e) throws Exception {
     	log.info("-----------------进入统一异常处理类-------------------");
         ModelAndView mav = new ModelAndView();
-        mav.addObject("exception",e);
+        mav.addObject("exception",e); 
         mav.addObject("url", req.getRequestURL());
-    	log.info("message==="+e.getMessage());
+    	log.info("message==="+e.getMessage());    
     	log.info("url==="+req.getRequestURL());
         mav.setViewName(DEFAULT_ERROR_VIEW);
         return mav;
