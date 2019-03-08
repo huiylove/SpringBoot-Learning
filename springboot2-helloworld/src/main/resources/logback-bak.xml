@@ -36,6 +36,6 @@
     </root>
 
     <!-- logback为java中的包 -->
-    <logger name="com.huiy.springboot2"/>
+    <logger name="com.fuiou"/>
 
 </configuration>

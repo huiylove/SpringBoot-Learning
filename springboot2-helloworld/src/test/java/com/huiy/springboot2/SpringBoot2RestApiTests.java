@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.huiy.springboot2;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
